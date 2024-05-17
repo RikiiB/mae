@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+        <Button
+                android:text="Datenspeicher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datenspeicherButton"
+                tools:layout_editor_absoluteX="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/uhrzeitButton"
+                android:layout_marginTop="8dp" />
+
+        <Button
+                android:text="Time and Weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/toNotificationbutton"
+                tools:layout_editor_absoluteX="16dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/uhrzeitButton" />
+
+        <Button
+                android:text="To Notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toNotificationbutton"
+                app:layout_constraintTop_toBottomOf="@+id/listButton"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+                android:text="@string/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nextButton"
+                app:layout_constraintTop_toBottomOf="@+id/listLinearLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+                android:text="@string/to_views"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewsButton"
+                app:layout_constraintTop_toBottomOf="@+id/nextButton"
+                tools:layout_editor_absoluteX="145dp"
+                android:layout_marginTop="8dp" />
+
+        <Button
+                android:text="@string/to_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listButton"
+                tools:layout_editor_absoluteX="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/viewsButton"
+                android:layout_marginTop="8dp" />
+
+        <EditText
+                android:id="@+id/nameTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:ems="10"
+                android:hint="Max Mustermann"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+                android:id="@+id/phoneTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="+49 - 123456789"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="@+id/nameTextField"
+                app:layout_constraintStart_toStartOf="@+id/nameTextField"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextField" />
+
+        <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/save"
+                app:layout_constraintStart_toStartOf="@+id/phoneTextField"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTextField" />
+
+        <Button
+                android:id="@+id/dialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/dial"
+                app:layout_constraintEnd_toEndOf="@+id/phoneTextField"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTextField" />
+
+        <LinearLayout
+                android:id="@+id/listLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/dialButton"
+                app:layout_constraintStart_toStartOf="@+id/saveButton"
+                app:layout_constraintTop_toBottomOf="@+id/readPhoneNumberPermissionButton"></LinearLayout>
+
+        <Button
+                android:id="@+id/readPhoneNumberPermissionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/permission"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/saveButton"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

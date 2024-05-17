@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/FirstFragment">
+
+    <fragment
+            android:id="@+id/FirstFragment"
+            android:name="hsw.riki.mae.FirstFragment"
+            android:label="@string/first_fragment_label"
+            tools:layout="@layout/fragment_first">
+
+        <action
+                android:id="@+id/action_FirstFragment_to_SecondFragment"
+                app:destination="@id/SecondFragment" />
+        <action
+                android:id="@+id/action_FirstFragment_to_nameInputFragment"
+                app:destination="@id/NameInputFragment" />
+        <action
+                android:id="@+id/action_FirstFragment_to_ViewsFragment"
+                app:destination="@id/ViewsFragment" />
+        <action
+                android:id="@+id/action_FirstFragment_to_monthListFragment"
+                app:destination="@id/monthListFragment" />
+        <action
+                android:id="@+id/action_FirstFragment_to_notificationsFragment"
+                app:destination="@id/notificationsFragment" />
+        <action
+                android:id="@+id/action_FirstFragment_to_threadFragment"
+                app:destination="@id/threadFragment" />
+        <action
+                android:id="@+id/action_FirstFragment_to_datenspeicherFragment"
+                app:destination="@id/datenspeicherFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/SecondFragment"
+            android:name="hsw.riki.mae.SecondFragment"
+            android:label="@string/second_fragment_label"
+            tools:layout="@layout/fragment_second">
+
+        <action
+                android:id="@+id/action_SecondFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/NameInputFragment"
+            android:name="hsw.riki.mae.NameInputFragment"
+            android:label="Name Input Fragment"
+            tools:layout="@layout/fragment_name_input">
+        <action
+                android:id="@+id/action_nameInputFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+        <action
+                android:id="@+id/action_nameInputFragment_to_nameOutputFragment"
+                app:destination="@id/NameOutputFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/NameOutputFragment"
+            android:name="hsw.riki.mae.NameOutputFragment"
+            android:label="Name Output Fragment"
+            tools:layout="@layout/fragment_name_output">
+        <action
+                android:id="@+id/action_nameOutputFragment_to_nameInputFragment"
+                app:destination="@id/NameInputFragment" />
+        <argument
+                android:name="firstName"
+                app:argType="string" />
+        <argument
+                android:name="lastName"
+                app:argType="string" />
+        <argument
+                android:name="gender"
+                app:argType="string" />
+    </fragment>
+    <fragment
+            android:id="@+id/ViewsFragment"
+            android:name="hsw.riki.mae.views.ViewsFragment"
+            android:label="Views">
+        <action
+                android:id="@+id/action_ViewsFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/monthListFragment"
+            android:name="hsw.riki.mae.MonthListFragment"
+            android:label="Month List Fragment">
+        <action
+                android:id="@+id/action_monthListFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/notificationsFragment"
+            android:name="hsw.riki.mae.NotificationFragment"
+            android:label="Fragment Notification"
+            tools:layout="@layout/fragment_notification">
+        <action
+                android:id="@+id/action_notificationsFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/threadFragment"
+            android:name="hsw.riki.mae.ThreadFragment"
+            android:label="Time and Weather Thread"
+            tools:layout="@layout/fragment_thread">
+        <action
+                android:id="@+id/action_threadFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/datenspeicherFragment"
+            android:name="hsw.riki.mae.DatenspeicherFragment"
+            android:label="Datenspeicher"
+            tools:layout="@layout/fragment_datenspeicher">
+        <action
+                android:id="@+id/action_datenspeicherFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>
