@@ -32,6 +32,12 @@
         <action
                 android:id="@+id/action_FirstFragment_to_datenspeicherFragment"
                 app:destination="@id/datenspeicherFragment" />
+        <action
+                android:id="@+id/action_FirstFragment_to_databaseFragment"
+                app:destination="@id/databaseFragment" />
+        <action
+                android:id="@+id/action_FirstFragment_to_databaseListFragment"
+                app:destination="@id/databaseListFragment" />
     </fragment>
     <fragment
             android:id="@+id/SecondFragment"
@@ -114,6 +120,24 @@
             tools:layout="@layout/fragment_datenspeicher">
         <action
                 android:id="@+id/action_datenspeicherFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/databaseFragment"
+            android:name="hsw.riki.mae.DatabaseFragment"
+            android:label="Database Fragment"
+            tools:layout="@layout/fragment_database">
+        <action
+                android:id="@+id/action_databaseFragment_to_FirstFragment"
+                app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/databaseListFragment"
+            android:name="hsw.riki.mae.DatabaseListFragment"
+            android:label="Name List"
+            tools:layout="@layout/fragment_database_list">
+        <action
+                android:id="@+id/action_databaseListFragment_to_FirstFragment"
                 app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

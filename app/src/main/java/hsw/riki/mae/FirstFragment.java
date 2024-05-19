@@ -120,6 +120,18 @@ public class FirstFragment extends Fragment {
               .navigate(FirstFragmentDirections.actionFirstFragmentToDatenspeicherFragment());
         });
 
+    binding.databaseButton.setOnClickListener(
+        v -> {
+          NavHostFragment.findNavController(FirstFragment.this)
+              .navigate(FirstFragmentDirections.actionFirstFragmentToDatabaseFragment());
+        });
+
+    binding.databaseListButton.setOnClickListener(
+        v -> {
+          NavHostFragment.findNavController(FirstFragment.this)
+              .navigate(FirstFragmentDirections.actionFirstFragmentToDatabaseListFragment());
+        });
+
     if (requireActivity().getIntent().getExtras() != null
         && requireActivity().getIntent().getExtras().containsKey("hsw.riki.mae.msg")) {
       Toast.makeText(
