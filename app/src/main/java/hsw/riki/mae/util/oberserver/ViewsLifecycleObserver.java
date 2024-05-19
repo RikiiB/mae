@@ -1,4 +1,4 @@
-package hsw.riki.mae.oberserver;
+package hsw.riki.mae.util.oberserver;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.DefaultLifecycleObserver;

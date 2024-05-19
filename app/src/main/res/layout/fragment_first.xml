@@ -12,6 +12,24 @@
             android:padding="16dp">
 
         <Button
+                android:text="Database List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/databaseListButton"
+                tools:layout_editor_absoluteX="138dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/databaseButton" />
+
+        <Button
+                android:text="Database"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/databaseButton"
+                app:layout_constraintTop_toBottomOf="@+id/datenspeicherButton"
+                tools:layout_editor_absoluteX="16dp"
+                android:layout_marginTop="8dp" />
+
+        <Button
                 android:text="Datenspeicher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
