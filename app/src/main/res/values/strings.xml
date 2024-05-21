@@ -37,6 +37,7 @@
     <string name="storage_filestorage_successfully_deleted">Datei wurde gelöscht.</string>
 
     <string name="api_key">7e77eb340f3f5e8e118a9724031a4ca4</string>
+    <string name="sensor_lightsensor_data">600</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

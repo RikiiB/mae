@@ -132,6 +132,11 @@ public class FirstFragment extends Fragment {
               .navigate(FirstFragmentDirections.actionFirstFragmentToDatabaseListFragment());
         });
 
+    binding.sensorButton.setOnClickListener(v -> {
+        NavHostFragment.findNavController(FirstFragment.this)
+                .navigate(FirstFragmentDirections.actionFirstFragmentToSensorFragment());
+    });
+
     if (requireActivity().getIntent().getExtras() != null
         && requireActivity().getIntent().getExtras().containsKey("hsw.riki.mae.msg")) {
       Toast.makeText(
